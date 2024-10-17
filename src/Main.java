@@ -11,8 +11,8 @@ public class Main {
 
         System.out.println("Значение переменной " + "\"apple\" " + "с типом " + "\"int\" " + "равно " + apple);
         System.out.println("Значение переменной " + "\"percent\" " + "с типом " + "\"byte\" " + "равно " + percent);
-        System.out.println("Значение переменной " + "\"box\" " + "с типом " + "\"long\" " + "равно " + box);
-        System.out.println("Значение переменной " + "\"storage\" " + "с типом " + "\"int\" " + "равно " + storage);
+        System.out.println("Значение переменной " + "\"box\" " + "с типом " + "\"short\" " + "равно " + box);
+        System.out.println("Значение переменной " + "\"storage\" " + "с типом " + "\"long\" " + "равно " + storage);
         System.out.println("Значение переменной " + "\"appleForVehicles\" " + "с типом " + "\"float\" " + "равно " + appleForVehicles);
         System.out.println("Значение переменной " + "\"appleForShips\" " + "с типом " + "\"double\" " + "равно " + appleForShips + "\n");
 
@@ -32,16 +32,23 @@ public class Main {
         int sheetsPerStudent = (totalSheets / (classA + classB + classC));
         System.out.println(sheetsPerStudent + "\n");
 
-        byte PerformanceInTwoMinutes = 16;
-        short PerformanceInTwentyMinutes = (short) (PerformanceInTwoMinutes * 10);
-        short PerformanceInDay = (short) (PerformanceInTwentyMinutes * 3 * 24);
-        int PerformanceInThreeDay = (PerformanceInDay * 3);
-        int PerformanceInMonth = (PerformanceInThreeDay * 10);
+        byte performanceInTwoMinutes = 16;
+        byte twoMinute = 2;
+        byte performanceInMinutes = (byte) (performanceInTwoMinutes / twoMinute);
+        byte twentyMinutes = 20;
+        short performanceInTwentyMinutes = (short) (performanceInMinutes * twentyMinutes);
+        byte minutesInHour = 60;
+        byte hourInDay = 24;
+        short performanceInDay = (short) (performanceInMinutes * minutesInHour * hourInDay);
+        byte threeDays = 3;
+        int performanceInThreeDay = (performanceInDay * threeDays);
+        byte thirtyDays = 30;
+        int performanceInMonth = (performanceInDay * thirtyDays);
 
-        System.out.println("За 20 минут машина произвела " + PerformanceInTwentyMinutes + " штук бутылок");
-        System.out.println("За сутки машина произвела " + PerformanceInDay + " штук бутылок");
-        System.out.println("За 3 дня машина произвела " + PerformanceInThreeDay + " штук бутылок");
-        System.out.println("За 30 дней машина произвела " + PerformanceInMonth + " штук бутылок\n");
+        System.out.println("За 20 минут машина произвела " + performanceInTwentyMinutes + " штук бутылок");
+        System.out.println("За сутки машина произвела " + performanceInDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела " + performanceInThreeDay + " штук бутылок");
+        System.out.println("За 30 дней машина произвела " + performanceInMonth + " штук бутылок\n");
 
         byte cansForSchool = 120;
         byte countClass = (byte) (cansForSchool / 6);
@@ -67,14 +74,16 @@ public class Main {
         System.out.println(totalGeneralWeightInGrams + "гр");
         System.out.println(totalGeneralWeightInKg + "кг\n");
 
-        byte NeedToLoseKG = 7;
-        int NeedToLoseGR = (NeedToLoseKG * 1000);
+        byte needToLoseKG = 7;
+        short gramInKilo = 1000;
+        int needToLoseGR = (needToLoseKG * gramInKilo);
         short losePerDayMin = 250;
         short losePerDayMax = 500;
 
-        int loseWeightOnMin = NeedToLoseGR / losePerDayMin;
-        int loseWeightOnMax = NeedToLoseGR / losePerDayMax;
-        float loseWeightOnAverage = (float) NeedToLoseGR / (losePerDayMin + losePerDayMax) * 2;
+        int loseWeightOnMin = needToLoseGR / losePerDayMin;
+        int loseWeightOnMax = needToLoseGR / losePerDayMax;
+        byte average = 2;
+        float loseWeightOnAverage = (float) needToLoseGR / (losePerDayMin + losePerDayMax) * average;
 
         System.out.println(loseWeightOnMin);
         System.out.println(loseWeightOnMax);
